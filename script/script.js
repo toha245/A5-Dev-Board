@@ -60,7 +60,7 @@ historyBtn.addEventListener('click', function(event){
 // theme btn click and bg changed
 const themeBtn = document.getElementById('theme-btn');
 const bgBody = document.getElementById('bg-body');
-const colors = ['#F4F7FF', 'red', 'green', 'blue', 'orange', 'purple', '#3498db'];
+const colors = ['red', 'green', 'blue', 'orange', 'purple', '#3498db', '#F4F7FF'];
 let colorIndex = 0;
 
 themeBtn.addEventListener('click', function(event){
