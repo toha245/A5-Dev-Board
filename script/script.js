@@ -1,3 +1,16 @@
+// back to home
+const backBtn = document.getElementById('back-button');
+if(backBtn){
+    backBtn.addEventListener('click', function(event){
+    event.preventDefault();
+    window.location.href = 'index.html';
+    // window.history.back();
+})
+}
+
+
+// functions of index.html
+
 const cardsButtons = document.getElementsByClassName('card-btn');
 const taskCountElement = document.getElementById('task-count');
 const taskCount = document.getElementById('task-count').innerText;
@@ -42,4 +55,30 @@ historyBtn.addEventListener('click', function(event){
     event.preventDefault();
     historyItems.innerHTML = ''; 
 })
+
+
+// theme btn click and bg changed
+const themeBtn = document.getElementById('theme-btn');
+const bgBody = document.getElementById('bg-body');
+const colors = ['#F4F7FF', 'red', 'green', 'blue', 'orange', 'purple', '#3498db'];
+let colorIndex = 0;
+
+themeBtn.addEventListener('click', function(event){
+    event.preventDefault();
+    bgBody.style.backgroundColor = colors[colorIndex];
+    colorIndex ++ ;
+    if (colorIndex === colors.length) {
+        colorIndex = 0;
+    }
+})
+
+// click button and go next page
+const discoverBtn = document.getElementById('discover-btn');
+if(discoverBtn){
+    discoverBtn.addEventListener('click', function(event){
+    event.preventDefault();
+    window.location.href = 'blogs.html';
+})
+}
+
 
